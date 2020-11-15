@@ -6,15 +6,15 @@ A W.I.P Moderation Discord Bot
 ### hi ###
 It greets you
 
-### Ban ###
+## Ban ##
 It bans the specified user
 
-### Kick ###
+## Kick ##
 It kicks the specified user
 
 note: You need to have the "ban members" permission to use this command
 
-### Clear ###
+## Clear ##
 It clears a given amount of messages
 
 note: You need to have the "manage messages" permission to use this command!
@@ -22,18 +22,18 @@ note: You need to have the "manage messages" permission to use this command!
 
 > This command does not delete pinned messages!
 
-### Force Clear ###
+## Force Clear ##
 It clears a given amount of messages
 
 note: It's the same as the clear command except that it does delete pinned messages
 
-### hi ###
+## hi ##
 It greets you
 
-## help ###
+## help ##
 The help menu.
 
-### verify ###
+## verify ##
 This command only works on [my discord server](https://discord.gg/uyUUSgRhPE)
 
 
