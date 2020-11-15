@@ -19,6 +19,7 @@ It clears a given amount of messages
 
 note: You need to have the "manage messages" permission to use this command!
 > The amount of messages can't be higher than 100!
+
 > This command does not delete pinned messages!"
 
 ### Force Clear ###
