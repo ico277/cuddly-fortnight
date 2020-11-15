@@ -1,2 +1,2 @@
-# cuddly-fortnight
+# mod discord bot
 A Moderation Discord Bot
