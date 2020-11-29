@@ -40,7 +40,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
 
 module.exports.help = {
     name: "force clear",
-    usage: "verify!force clear <amount>",
+    usage: "mod!force clear <amount>",
     desc: "It clears an amount of messages",
     note: "It's the same as the clear command except that it does delete pinned messages"
 }

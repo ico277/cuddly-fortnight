@@ -81,7 +81,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[], clien
 
 module.exports.help = {
     name: "verify",
-    usage: "verify!verify",
+    usage: "mod!verify",
     desc: "The command to verify.",
-    note: "You can't use this command if you're already verified!"
+    note: "You can't use this command if you're already verified!\nThis command only works on my discord server!"
 }

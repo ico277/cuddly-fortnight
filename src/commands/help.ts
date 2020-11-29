@@ -32,7 +32,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
         let embed = new discord.MessageEmbed()
             .setTitle("Help menu")
             .addField("All commands", cmds.join(", "))
-            .addField("Note", "For for information about a command do verify!help [command name]")
+            .addField("Note", "For for information about a command do mod!help <command name>")
             .setFooter("<arg> means required argument\n[arg] means optional argument")
             .setColor(0x0066FF);
         msg.channel.send(embed);
@@ -41,7 +41,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
 
 module.exports.help = {
     name: "help",
-    usage: "verify!help [command]",
+    usage: "mod!help [command]",
     desc: "It shows this help menu",
     note: null
 }

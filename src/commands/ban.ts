@@ -88,7 +88,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
 
 module.exports.help = {
     name: "ban",
-    usage: "verify!ban <@user>",
+    usage: "mod!ban <@user>",
     desc: "It bans the specified user",
     note: "You need to have the \"ban members\" permission to use this command!"
 }

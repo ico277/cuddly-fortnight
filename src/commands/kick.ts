@@ -1,6 +1,6 @@
 import * as discord from "discord.js"
 
-module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
+module.exports.runCmd = async function (msg: discord.Message, args: string[]) {
     if (msg.member.hasPermission("KICK_MEMBERS")) {
         let mentions = msg.mentions.members.array();
         if (mentions.length > 0) {
@@ -12,12 +12,12 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
                     .addField("Moderator", `tag: "${msg.author.tag}"\nid: "${msg.author.id}"`, true)
                     .addField("Reason", "Type a reason for the kick in the chat. (type \"cancel\" to cancel or type \"none\" for no reason)", false)
                     .setFooter("You have 20 seconds to respond with a reason!")
-                    .setThumbnail(mention.user.displayAvatarURL({dynamic: true, size: 512}))
+                    .setThumbnail(mention.user.displayAvatarURL({ dynamic: true, size: 512 }))
                     .setColor(0x0066FF);
                 await msg.channel.send(embed);
                 const collector = new discord.MessageCollector((<discord.TextChannel>msg.channel), (m) => m.author.id == msg.author.id, { time: 20000 });
                 collector.on('collect', async (message) => {
-                    switch(message.content.toLowerCase()) {
+                    switch (message.content.toLowerCase()) {
                         case "cancel": {
                             collector.stop("cancelled");
                             break;
@@ -36,7 +36,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
                                         .addField("Moderator", `tag: "${msg.author.tag}"\nid: "${msg.author.id}"`, true)
                                         .addField("Kick Reason", message.content, false)
                                         .addField("Kick", `Successfully kicked ${KickedMember.user.tag}!`)
-                                        .setThumbnail(KickedMember.user.displayAvatarURL({dynamic: true, size: 512}))
+                                        .setThumbnail(KickedMember.user.displayAvatarURL({ dynamic: true, size: 512 }))
                                         .setColor(0x0066FF);
                                     msg.channel.send(embed);
                                 }).catch(err => {
@@ -63,7 +63,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
                                     .addField("Member", `tag: "${KickedMember.user.tag}"\nid: "${KickedMember.user.id}"`, true)
                                     .addField("Moderator", `tag: "${msg.author.tag}"\nid: "${msg.author.id}"`, true)
                                     .addField("Kick", `Successfully kicked ${KickedMember.user.tag}!`)
-                                    .setThumbnail(KickedMember.user.displayAvatarURL({dynamic: true, size: 512}))
+                                    .setThumbnail(KickedMember.user.displayAvatarURL({ dynamic: true, size: 512 }))
                                     .setColor(0x0066FF);
                                 msg.channel.send(embed);
                             }).catch(err => {
@@ -88,7 +88,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
 
 module.exports.help = {
     name: "ban",
-    usage: "verify!kick <@user>",
-    desc: "It kick the specified user",
-    note: "You need to have the \"kick members\" permission to use this command!"
+    usage: "mod!ban <@user>",
+    desc: "It bans the specified user",
+    note: "You need to have the \"ban members\" permission to use this command!"
 }

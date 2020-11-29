@@ -7,7 +7,7 @@ module.exports.runCmd = async function(msg:discord.Message, args:string[]) {
 
 module.exports.help = {
     name: "hi",
-    usage: "verify!hi",
+    usage: "mod!hi",
     desc: "It greets you",
     note: "You can use this command to test if the bot is online"
 }
