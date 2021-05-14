@@ -1,6 +1,5 @@
 import * as discord from "discord.js";
 import * as fs from "fs";
-import { ObjectFlags } from "typescript";
 
 export class ModBot {
     public client: discord.Client;
